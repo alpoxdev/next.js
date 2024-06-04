@@ -5,7 +5,10 @@ use turbo_tasks_fs::{File, FileSystemPath};
 use turbopack_binding::turbopack::{
     core::{
         asset::AssetContent,
-        chunk::{ChunkItem, ChunkItemExt, ChunkableModule, ChunkingContext, ModuleId as TurbopackModuleId},
+        chunk::{
+            ChunkItem, ChunkItemExt, ChunkableModule, ChunkingContext,
+            ModuleId as TurbopackModuleId,
+        },
         output::OutputAsset,
         virtual_output::VirtualOutputAsset,
     },
