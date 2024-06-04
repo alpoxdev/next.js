@@ -193,7 +193,8 @@ pub async fn get_server_resolve_options_context(
             project_path,
             project_path.root(),
             ExternalPredicate::AllExcept(Vc::cell(transpile_packages)).cell(),
-            *next_config.import_externals().await?,
+            *next_config.import_externals().await?
+                && !matches!(ty, ServerContextType::AppSSR { .. }),
         )
     };
 
